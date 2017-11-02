@@ -1,0 +1,13 @@
+{
+  "name": "universal-javascript",
+  "version": "0.0.1",
+  "description": "Coursework for Universal Javascript with React, Node, and Redux module",
+  "scripts": {
+
+  },
+  "author": "Chris Cox <christopher.e.cox@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {}
+}
