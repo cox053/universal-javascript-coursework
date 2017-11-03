@@ -1,0 +1,62 @@
+{
+  "name": "universal-javascript",
+  "version": "0.0.1",
+  "description": "Coursework for Universal Javascript with React, Node, and Redux module",
+  "author": "Chris Cox <christopher.e.cox@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "cross-env": "^5.1.1",
+    "express": "^4.16.2",
+    "history": "^4.7.2",
+    "isomorphic-fetch": "^2.2.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "serve-favicon": "^2.4.5",
+    "webpack": "^3.8.1",
+    "webpack-dev-middleware": "^1.12.0",
+    "webpack-hot-middleware": "^2.20.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-react-transform": "^3.0.0",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "del": "^3.0.0",
+    "eslint": "^4.10.0",
+    "eslint-config-prettier": "^2.7.0",
+    "eslint-config-walmart": "^1.2.4",
+    "eslint-plugin-filenames": "^1.2.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-react": "^7.4.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
+    "npm-run-all": "^4.1.1",
+    "prettier": "1.7.4",
+    "react-transform-hmr": "^1.0.4"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "format": "prettier --print-width 100 --debug-check \"**/*.js\" \"*.js\"",
+    "lint": "eslint '**/!(node_modules)/*.js' '*.js'",
+    "postinstall": "node scripts/install.js",
+    "precommit": "lint-staged",
+    "prepublish": "npm test",
+    "preversion": "npm test",
+    "server": "nodemon server/index.js",
+    "start": "npm-run-all build server"
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "prettier --max-length 100 --write",
+      "git add"
+    ]
+  }
+}

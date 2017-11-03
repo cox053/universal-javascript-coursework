@@ -1,0 +1,17 @@
+---
+  extends:
+    - walmart/configurations/es6-node
+    - prettier
+    - prettier/react
+  # plugins:
+  #   - import
+  env:
+    browser: true
+    node: true
+  parserOptions:
+    sourceType: module
+#  rules:
+#    react/jsx-filename-extension: 0
+#    import/extensions: 0
+#    no-shadow: 0
+#    function-paren-newline: 0
